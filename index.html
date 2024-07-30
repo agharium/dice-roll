@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dice Roll</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.1/css/bulma.min.css">
+  </head>
+  <body>
+		<section class="section">
+			<section class="section">
+					<div class="container" style="max-width: 30%">
+						<div>
+							<h1 class="title">
+								RPG
+							</h1>
+							<p class="subtitle">
+								Sorteio de <strong> "dados" </strong>
+							</p>
+						</div>
+				
+						<div class="my-5">
+							<div class="field">
+								<label class="label">Dados</label>
+								<div class="control">
+									<input class="input" type="number" id="dices" value="2">
+								</div>
+							</div>
+				
+							<div class="field">
+								<label class="label">Faces</label>
+								<div class="control">
+									<div class="select" style="min-width: 100%">
+										<select id="faces" style="min-width: 100%">
+											<option value="2"> 2 </option>
+											<option value="4"> 4 </option>
+											<option value="6" selected> 6 </option>
+											<option value="8"> 8 </option>
+											<option value="10"> 10 </option>
+											<option value="12"> 12 </option>
+											<option value="20"> 20 </option>
+										</select>
+									</div>
+								</div>
+							</div>
+				
+							<div class="field">
+								<label class="label">Bônus</label>
+								<div class="control">
+									<input class="input" type="number" id="bonus" min="0" value="0">
+								</div>
+							</div>
+				
+							<div class="field">
+								<label class="label">Ônus</label>
+								<div class="control">
+									<input class="input" type="number" id="onus" min="0" value="0">
+								</div>
+							</div>
+				
+							<div class="field">
+								<label class="label">Dificuldade</label>
+								<div class="control">
+									<div class="select" style="min-width: 100%">
+										<select id="difficulty" style="min-width: 100%">
+											<option value="30"> Muito Fácil </option>
+											<option value="45"> Fácil </option>
+											<option value="65" selected> Médio </option>
+											<option value="80"> Difícil </option>
+											<option value="90"> Muito difícil </option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+				
+						<button class="button is-link is-fullwidth" id="roll">Rolar</button>
+				
+						<button class="button is-fullwidth mt-2" id="clean">Limpar</button>
+				
+						<div id="result" style="display: none" class="mt-5">
+							<div id="rolling" class="grid">
+				
+							</div>
+							<h3 class="has-text-centered">
+								Foram rolados <strong id="res_diceN"></strong> dados de <strong id="res_faceN"></strong> faces com a dificuldade de <strong id="res_diffN"></strong>, bônus de <strong id="res_bonusN"></strong> e ônus de <strong id="res_onusN"></strong>. O resultado foi <strong id="res_N"></strong>, equivalente a <strong id="res_diffPercent"></strong> da dificuldade, logo o teste foi um <strong id="res_word"></strong> <strong id="res_emote"></strong>
+							</h3>
+						</div>
+				
+					</div>
+				</section>
+		</section>
+
+		<script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/nastyox/Rando.js@master/code/plain-javascript/2.0.0/rando-min.js"></script>
+		<script src="script.js"></script>
+  </body>
+</html>
